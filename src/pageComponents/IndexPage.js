@@ -1,12 +1,14 @@
 import React from "react";
 
-import HelloWorld from './indexPage/HelloWorld';
+import Landing from './indexPage/Landing'; 
+
 
 const IndexPage = () => {
 	return (
-		<React.Fragment>
-			<HelloWorld />
-		</React.Fragment>
+	
+			<div className="home-page">
+				<Landing />
+			</div>
 	);
 }
 

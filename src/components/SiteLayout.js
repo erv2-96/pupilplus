@@ -6,12 +6,17 @@ import Header from "./siteLayout/Header";
 import Footer from "./siteLayout/Footer";
 
 const Main = styled.main`
-	padding: 2rem;
+	margin: 0;
 `;
+
+const darkgreen = '#99CC99';
+const navy = '#05182A';
+const lightgreen = '#B4D3D2';
 
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
+	color: ${navy};
 `;
 
 const SiteLayout = ({title, children, pathname}) => 
