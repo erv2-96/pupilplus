@@ -5,5 +5,11 @@ body {
 .menu {
   margin: 5% auto; }
 
+#premiumForm label {
+  display: block; }
+
+#premiumForm h2 {
+  margin: 5% 0; }
+
 .menu {
   margin: 5% auto; }

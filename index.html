@@ -2,26 +2,99 @@
 
 <head>
     <meta name="description" content="Pupil premium">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css"></link>
-    <link rel="stylesheet" type="text/css" href="./dist/css/style.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    </link>
+    <link rel="stylesheet" type="text/css" href="./dist/css/style.min.css">
+    </link>
 
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./dist/js/app.min.js"></script>
 </head>
-    <header>
-        <div class="menu container">
-            <a href="/">Home</a>
-        </div>
-    </header>
-    <body>
-        <div class="container">
-            This is pupil premium!
-        </div>
-    </body>
-    <footer></footer>
+<header>
+    <div class="menu container">
+        <a href="/">Home</a>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <form id="premiumForm">
+            <fieldset>
+                <h2>Pupil</h2>
+                <label id="name">
+                    Name
+                    <input type="text">
+                </label>
+                <label id="dateOfBirth">
+                    Date of Birth
+                    <input type="text">
+                </label>
+                <label id="school">
+                    Name of School
+                    <input type="text">
+                </label>
+            </fieldset>
+            <fieldset>
+                <h2>Parents/Gurdians</h2>
+                <label id="">
+                    Name
+                    <input type="text">
+                </label>
+                <label id="">
+                    Date of Birth
+                    <input type="text">
+                </label>
+                <label id="">
+                    NI Number or National Asylum number
+                    <input type="number">
+                </label>
+                <label id="">
+                    Daytime phone number
+                    <input type="number">
+                </label>
+                <label id="">
+                    Address
+                    <input type="text">
+                </label>
+                <label id="">
+                    Postcode
+                    <input type="text">
+                </label>
+            </fieldset>
+            <fieldset>
+                <h2>Do you qulify for any of the following?</h2>
+
+                <label id="">
+                    Income support
+                    <input type="checkbox">
+                </label>
+                <label id="">
+                    Income based job seeker allowance
+                    <input type="checkbox">
+                </label>
+                <label id="">
+                    Income related employment and support allowence
+                    <input type="checkbox">
+                </label>
+                <label id="">
+                    National Asylum support
+                    <input type="checkbox">
+                </label>
+                <label id="">
+                    State pension credit
+                    <input type="checkbox">
+                </label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+<footer></footer>
+
 </html>
