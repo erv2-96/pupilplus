@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <meta name="description" content="Pupil premium">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    </link>
+    <link rel="stylesheet" type="text/css" href="./dist/css/style.min.css">
+    </link>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./dist/js/app.min.js"></script>
+</head>
+<header>
+    <div class="menu container">
+        <a href="./index.html">Home</a>
+        <a href="./form.html">Form</a>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <form id="premiumForm">
+            <fieldset class="qualify">
+                <h2>Do you qualify for any of the following?</h2>
+
+                <label id="incomeSupport" class="checkbox-wrap">
+                    <input type="checkbox">
+                    Income support
+                    <span class="checkmark"></span>
+                </label>
+                <label id="jobSeeker" class="checkbox-wrap">
+                    <input type="checkbox">
+                    Income based job seeker allowance
+                    <span class="checkmark"></span>
+                </label>
+                <label id="employmentSupportAllowance" class="checkbox-wrap">
+                    <input type="checkbox">
+                    Income related employment and support allowance
+                    <span class="checkmark"></span>
+                </label>
+                <label id="NAsupport" class="checkbox-wrap">
+                    <input type="checkbox">
+                    National Asylum support
+                    <span class="checkmark"></span>
+                </label>
+                <label id="statePension" class="checkbox-wrap">
+                    <input type="checkbox">
+                    State pension credit
+                    <span class="checkmark"></span>
+                </label>
+                <label id="childTaxCredit" class="checkbox-wrap">
+                    <input type="checkbox">
+                    Child tax credit
+                    <span class="checkmark"></span>
+                </label>
+                <label id="childTaxCreditAmount">
+                    Child tax credit Amount:
+                    <input type="text">
+                </label>
+                <label id="workingTaxCredit" class="checkbox-wrap">
+                    <input type="checkbox">
+                    Working tax credit
+                </label>
+                <label id="universalCredit" class="checkbox-wrap">
+                    <input type="checkbox">
+                    Universial credit of more than £7,400
+                    <span class="checkmark"></span>
+                </label>
+                <label id="universalCreditAmount">
+                    Universial Credit Amount:
+                    <input type="text">
+                </label>
+            </fieldset>
+            <div class="main-form-wrap">
+                <fieldset class="parents">
+                    <h2>Parents/Gurdians</h2>
+                    <label id="parent-name">
+                        Name
+                        <input type="text">
+                    </label>
+                    <label id="parent-DoB">
+                        Date of Birth
+                        <input type="text">
+                    </label>
+                    <label id="NI-NA-no">
+                        NI Number or National Asylum number
+                        <input type="number">
+                    </label>
+                    <label id="phone">
+                        Daytime phone number
+                        <input type="number">
+                    </label>
+                    <label id="address">
+                        Address
+                        <textarea name="address"></textarea>
+                    </label>
+                    <label id="postcode">
+                        Postcode
+                        <input type="text">
+                    </label>
+                </fieldset>
+
+                <fieldset class="pupils">
+                    <h2>Pupil</h2>
+                    <label id="pupil-name">
+                        Name
+                        <input type="text">
+                    </label>
+                    <label id="pupil-DoB">
+                        Date of Birth
+                        <input type="text">
+                    </label>
+                    <label id="school">
+                        Name of School
+                        <input type="text">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <h2>Declaration</h2>
+                    <label id="declaration">
+                        <input type="checkbox">
+                        By ticking this box, you are agreeing to our terms of use.
+                        <span class="checkmark"></span>
+                    </label>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+<footer></footer>
+
+</html>
