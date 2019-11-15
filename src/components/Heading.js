@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 
-const StyledHeading = styled.h2`
-	margin: 0 0 50px 0;
+const StyledHeading = styled.div`
+	background: #067B8D;
 `;
 
 const Heading = ({children}) => {

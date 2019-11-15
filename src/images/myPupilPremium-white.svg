@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="387px" height="320px" viewBox="0 0 387 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>myPupilPremium</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="myPupilPremium" transform="translate(0.000000, 5.000000)">
+            <g id="logo-main">
+                <text id="pupil" fill="#FFFFFF" font-family="Montserrat-SemiBold, Montserrat" font-size="80" font-weight="500">
+                    <tspan x="168.89" y="218.77">pupil</tspan>
+                </text>
+                <g id="Group" transform="translate(248.220000, 55.380000)" fill="#FFFFFF" font-family="Montserrat-SemiBold, Montserrat" font-size="80" font-weight="500">
+                    <text id="m">
+                        <tspan x="0" y="77">m</tspan>
+                    </text>
+                    <text id="y">
+                        <tspan x="82.4" y="77">y</tspan>
+                    </text>
+                </g>
+                <polyline id="Path" stroke="#FFC108" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" points="27.32 228.66 134.81 228.66 134.81 155.99 226.03 155.99 226.03 67.45 331 67.45"></polyline>
+                <circle id="Oval" fill="#FFC108" fill-rule="nonzero" cx="9.83" cy="228.66" r="9.61"></circle>
+                <path d="M358.56,1.42108547e-14 C371.070867,0.00552112455 381.21,10.1491318 381.21,22.66 C381.21,34.91 368.15,44.28 369.97,50.57" id="Path" stroke="#FFC108" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M358.56,1.42108547e-14 C346.045228,1.42108547e-14 335.9,10.1452276 335.9,22.66 C335.9,34.91 348.96,44.28 347.15,50.57" id="Path" stroke="#FFC108" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M347.38,67.05 L370.33,67.05" id="Path" stroke="#FFC108" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <text id="premium" fill="#FFFFFF" font-family="Montserrat-SemiBold, Montserrat" font-size="80" font-weight="500">
+                <tspan x="7" y="299">premium</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

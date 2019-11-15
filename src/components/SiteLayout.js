@@ -9,9 +9,7 @@ const Main = styled.main`
 	margin: 0;
 `;
 
-const darkgreen = '#99CC99';
 const navy = '#05182A';
-const lightgreen = '#B4D3D2';
 
 const Wrapper = styled.div`
 	display: flex;
