@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap");
 body {
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 2%; }
+  margin-bottom: 10%; }
 
 .menu {
   margin: 5% auto; }
@@ -10,13 +10,24 @@ body {
   display: block; }
 
 #premiumForm .qualify label {
-  cursor: pointer; }
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
 
 #premiumForm h2 {
   margin: 5% 0; }
 
 #premiumForm button {
-  border: 2px solid blue; }
+  border: 2px solid blue;
+  background: none;
+  padding: 5px 15px; }
+
+#premiumForm fieldset {
+  margin-bottom: 5%; }
+
+#premiumForm #universalCreditAmount, #premiumForm #childTaxCreditAmount {
+  display: none; }
 
 .menu {
   margin: 5% auto; }
