@@ -9,26 +9,41 @@ const LandingWrapper = styled.div`
 `;
 
 const Overlay = styled.div`
-	clip-path: polygon(0 0, 100% 0, 100% 63%, 0% 100%);
-	height: 100vh;
+	clip-path: polygon(0 0, 100% 0, 100% 28%, 0% 100%);
+	min-height: 70vh;
 	padding: 0 5%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	align-items: flex-start;
+
 	background: #067B8D;
 	z-index: 5;
 	color: white;
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		margin-top: 5%;
+	}
 
 	p {
 		margin-bottom:2rem;
 	}
 `;
 
-const FormButton = styled.div`
+const FormButton = styled.a`
 	background: #fff;
 	padding: 15px;
-	color: #05182A;
+	color: #000;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.3s ease;
+
+	&:hover {
+		background: #000;
+	}
 `;
 
 
@@ -38,8 +53,8 @@ const Landing = () => {
 					<Overlay>
 						<div>
 							<h1>Realising opportunity and realising mindset</h1>
-							<p>Tagline tagline tagline</p>
-							<FormButton >
+					
+							<FormButton href="http://localhost/pupilpremiumchatbot">
 								Apply Now
 							</FormButton>
 						</div>
