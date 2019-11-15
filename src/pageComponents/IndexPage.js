@@ -5,7 +5,7 @@ import Landing from './indexPage/Landing';
 
 const IndexPage = () => {
 	return (
-	
+
 			<div className="home-page">
 				<Landing />
 			</div>

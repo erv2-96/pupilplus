@@ -1,10 +1,10 @@
 import React from 'react';
-import { ConversationalForm, EventDispatcher } from 'conversational-form';
+import { ConversationalForm, EventDispatcher } from '@types/conversational-form';
     var cfInstance = ConversationalForm.startTheConversation({
     formEl: document.getElementById("form")
 });
 
-export default class Chatbot extends React.Component {
+export default class ChatbotPage extends React.Component {
   constructor(props) {
     super(props);
     this.formFields = [

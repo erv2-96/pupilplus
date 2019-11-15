@@ -17,13 +17,13 @@ const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	color: ${navy};
+	max-width: 100vw;
 `;
 
 const SiteLayout = ({title, children, pathname}) => 
 	<Wrapper>
 
 		<Header pathname={pathname} />
-
 
 		<Main>
 			{children}

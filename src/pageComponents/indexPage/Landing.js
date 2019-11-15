@@ -5,25 +5,18 @@ import threeChildren from '../../images/three-children.jpg';
 
 const LandingWrapper = styled.div`
 	position: relative;
-`;
-
-const Image = styled.img`
-	width: 50%;
-	height: auto;
-	object-fit: cover;
-	object-position:center;
+	max-width: 100vw;
 `;
 
 const Overlay = styled.div`
-padding: 5%;
-	width: 100%;
-	height: 100%;
-	max-height: 80vh;
+	clip-path: polygon(0 0, 100% 0, 100% 63%, 0% 100%);
+	height: 100vh;
+	padding: 0 5%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background: rgba(5,24,42, 0.5);
+	background: #067B8D;
 	z-index: 5;
 	color: white;
 
@@ -44,13 +37,13 @@ const Landing = () => {
 			<LandingWrapper >
 					<Overlay>
 						<div>
-						<h1>Realising opportunity and realising mindset</h1>
-						<p>Tagline tagline tagline</p>
-						<FormButton >
-							Apply Now
-						</FormButton>
+							<h1>Realising opportunity and realising mindset</h1>
+							<p>Tagline tagline tagline</p>
+							<FormButton >
+								Apply Now
+							</FormButton>
 						</div>
-						<Image src={threeChildren} alt="" />
+					
 					</Overlay>
 				</LandingWrapper>
 	);
