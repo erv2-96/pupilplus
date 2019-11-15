@@ -44,6 +44,7 @@ const Heading = styled.h2`
 
 const List = styled.ul`
 	margin: 0;
+	font-size: 18px;
 
 	/* desktop */
 	@media (min-width:1050px)  {
@@ -106,6 +107,7 @@ const FlexRow = styled.div`
 const FlexColumn = styled.div`
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 `;
 
 const StatusBox = styled.div`
@@ -123,6 +125,14 @@ const ErrorText = styled.div`
 
 const RequiredParagraph = styled(Paragraph)`
 	margin-bottom: 0.75rem;
+`; 
+
+const LargeText = styled.p`
+		font-size: 26px;
+`;
+
+const Option = styled.option`
+	font-size: 16px;
 `;
 
 const CheckPage = () => {
@@ -132,6 +142,23 @@ const CheckPage = () => {
 
 	return (
 		<React.Fragment>
+
+			<h1>Eligibility checker</h1>
+
+			<LargeText>
+				Use this form separately for each child you are parent/guardian of.
+			</LargeText>
+
+			<LargeText>
+				The first part of this form helps determine if you are potentially eligible.
+			</LargeText>
+
+			<LargeText>
+				If you are eligible, you can fill out the second part of the form and send off the application!
+			</LargeText>
+
+
+			<VerticalSpacing size={50}	/>
 		
 			<Formik
 				initialValues={{ 
@@ -214,14 +241,14 @@ const CheckPage = () => {
 								
 									<Heading>Do you receive any of the following?</Heading>
 
-									<FlexRow>
+									<FlexColumn>
 										<List>
-											<li>Income Support</li>
-											<li>Income-based Job Seeker Allowance (JSA)</li>
-											<li>Income-related Employment and Support Allowance (ESA)</li>
-											<li>Support under Part 6 of the Immigration and Asylum Act 1999</li>
-											<li>The guarantee element of Pension Credit</li>
-											<li>Working Tax Credit run-on (paid for the four weeks after you stop qualifying for Working Tax Credit)</li>
+											<li><Paragraph>Income Support</Paragraph></li>
+											<li><Paragraph>Income-based Job Seeker Allowance (JSA)</Paragraph></li>
+											<li><Paragraph>Income-related Employment and Support Allowance (ESA)</Paragraph></li>
+											<li><Paragraph>Support under Part 6 of the Immigration and Asylum Act 1999</Paragraph></li>
+											<li><Paragraph>The guarantee element of Pension Credit</Paragraph></li>
+											<li><Paragraph>Working Tax Credit run-on (paid for the four weeks after you stop qualifying for Working Tax Credit)</Paragraph></li>
 										</List>
 
 										<Field
@@ -229,7 +256,7 @@ const CheckPage = () => {
 											options={["Yes", "No", "Maybe"]}
 											component={FormikRadioGroup}
 										/>
-									</FlexRow>									
+									</FlexColumn>									
 							</QuestionWrapper>						
 
 							<QuestionWrapper>
@@ -282,7 +309,26 @@ const CheckPage = () => {
 
 						{showAllForm && (
 							<>
-							
+
+								<VerticalSpacing size={50} />
+
+								<Label htmlFor="guardianNumber">
+									<FlexColumn>
+										<Paragraph>
+											Please select whether there are 1 or 2 parents/guardians for this child:
+										</Paragraph>
+										<Field as="select" name="guardianNumber">
+											<Option value="1">1 Parent/Guardian</Option>
+											<Option value="2">2 Parents/Guardians</Option>
+										</Field>
+									</FlexColumn>									
+								</Label>
+
+								<VerticalSpacing size={50} />
+
+								
+
+
 								<div>IGNORE BELOW</div>
 
 								<Button 
