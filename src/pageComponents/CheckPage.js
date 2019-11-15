@@ -55,7 +55,8 @@ const Button = styled.button`
   background: none;
   padding: 5px 15px;
   -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+	transition: 0.3s ease;
+	font-size: 20px;
 	
 	${props => !props.disabled && `
 		border: 2px solid #2196F3;
