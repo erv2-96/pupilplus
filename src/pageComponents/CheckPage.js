@@ -2,13 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import VerticalSpacing from '../components/VerticalSpacing';
+import Paragraph from "antd/lib/typography/Paragraph";
+import { OmitProps } from "antd/lib/transfer/renderListBody";
+
 const Label = styled.label`
-	display: block;
 	margin-bottom: 1rem; 
-	cursor: pointer;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content; 
 `;
 
 const CheckboxLabel = styled(Label)`
@@ -61,7 +60,16 @@ const Textarea = styled.textarea`
 `;
 
 const Heading = styled.h2`
-	margin: 5% 0;
+
+`;
+
+const List = styled.ul`
+	margin: 0;
+
+	/* desktop */
+	@media (min-width:1050px)  {
+		margin: 1px;
+	} 
 `;
 
 const Button = styled.button`
@@ -77,31 +85,55 @@ const Button = styled.button`
 	}
 `;
 
-const Fieldset = styled.fieldset`
-	margin-bottom: 5%;
+const Wrapper = styled.div`	
 `;
 
-const Wrapper = styled.div`
+const EligibilityWrapper = styled.div`
 	display: flex;
+	flex-direction: column;
+	
 `;
+
+const LabelForTextInput = styled(Label)`
+	display: flex;
+	flex-direction: row;
+`;
+
+const FieldParagraph = styled(Paragraph)`
+	margin-right: 1rem;
+`;
+
+const ListWrapper = styled.div``;
+
+const RadioButtonWrapper = styled.div``;
 
 const CheckPage = () => {
+
+	const [radioValue, setRadioValue] = React.useState(null);
+
+
 	return (
 		<React.Fragment>
-	
-	
-	{/* 
+		
 			<Formik
-				initialValues={{ email: '', password: '' }}
+				initialValues={{ 
+					//email: '',
+					listConditions: '',
+				}}
 				validate={values => {
 					const errors = {};
-					if (!values.email) {
-						errors.email = 'Required';
-					} else if (
-						!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-					) {
-						errors.email = 'Invalid email address';
+					
+					if (!values.listConditions) {
+						errors.listConditions = 'Required';
 					}
+					
+					// if (!values.email) {
+					// 	errors.email = 'Required';
+					// } else if (
+					// 	!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+					// ) {
+					// 	errors.email = 'Invalid email address';
+					// }
 					return errors;
 				}}
 				onSubmit={(values, { setSubmitting }) => {
@@ -111,143 +143,98 @@ const CheckPage = () => {
 					}, 400);
 				}}
 			>
-				{({ isSubmitting }) => (
-					<Form>
-						<Field
-							name="with_car"
-							component={Checkbox}
-							layout="inline-icon-center"
-							iconActive={<checkboxIcons.IconActive />}
-							iconInactive={<checkboxIcons.IconInactive />}
-							automationHook={FLIGHT_SEARCH_WITH_CAR.hook}
-						>
-							<LabelText>{flightAndCarLabel}</LabelText>
-						</Field>
+				{({ 
+					values,
+					handleSubmit,
+					isSubmitting,
+					isValid,
+					errors,
+					setFieldValue,
+				}) => {	
+					const setListConditionsField = value => {
+						setFieldValue('listConditions', value);
+					};
+					
+					return (
+						<Form>
 
-						<Label>
-							<Field type="checkbox" name="isAwesome" />
-							Are you awesome?
-         		 </Label>
-						
-						
-						
-						<Field type="email" name="email" />
-						<ErrorMessage name="email" component="div" />
-						<Field type="password" name="password" />
-						<ErrorMessage name="password" component="div" />
-						<button type="submit" disabled={isSubmitting}>
-							Submit
-						</button>
+							<Wrapper>
+
+								<ListWrapper>
+								
+									<Heading>Do you receive any of the following?</Heading>
+
+									<List>
+										<li>Income Support</li>
+										<li>Income-based Job Seeker Allowance (JSA)</li>
+										<li>Income-related Employment and Support Allowance (ESA)</li>
+										<li>Support under Part 6 of the Immigration and Asylum Act 1999</li>
+										<li>The guarantee element of Pension Credit</li>
+										<li>Working Tax Credit run-on (paid for the four weeks after you stop qualifying for Working Tax Credit)</li>
+										<li>Universal Credit where the yearly combined awarded amount for your household is less than £7,400</li>
+										<li>Child Tax Credit (with no Working Tax Credit) with an annual income of no more than £16,190</li>
+									</List>
+
+									<Field
+										name="listConditions"
+									>
+										{({ field }) => (
+											<>
+												<RadioButtonWrapper>
+													<input
+														{...field}
+														id="yes"
+														value="yes"
+														checked={field.value === 'yes'}
+														name="type"
+														type="radio"
+														onChange={() => setListConditionsField('yes')}
+													/>
+													<label htmlFor="yes">Yes</label>
+												</RadioButtonWrapper>
+
+												<RadioButtonWrapper>
+													<input
+														{...field}
+														id="maybe"
+														value="maybe"
+														name="type"
+														checked={field.value === 'maybe'}
+														type="radio"
+														onChange={() => setListConditionsField('maybe')}
+													/>
+													<label htmlFor="maybe">Maybe</label>
+												</RadioButtonWrapper>
+
+												<RadioButtonWrapper>
+													<input
+														{...field}
+														id="no"
+														value="no"
+														name="type"
+														checked={field.value === 'no'}
+														type="radio"
+														onChange={() => setListConditionsField('no')}
+													/>
+													<label htmlFor="no">No</label>
+												</RadioButtonWrapper>
+											</>
+										)}
+									</Field>
+
+									{errors.listConditions && <div>EVERYTHING IS WRONG</div>}
+							</ListWrapper>									
+							{/*
+							<Field type="email" name="email" />
+							<ErrorMessage name="email" component="div" />
+							*/}
+							<button type="submit" disabled={isSubmitting}>
+								Submit
+							</button>
+						</Wrapper>
 					</Form>
-				)}
-			</Formik>
-	*/}
-	
-		<form>
-				<Wrapper>
-					<Fieldset>
-						<Heading>Do you qualify for any of the following?</Heading>
-
-						<Label id="incomeSupport">
-							<Input type="checkbox" />
-							Income support
-						</Label>
-						<Label id="jobSeeker">
-							<Input type="checkbox" />
-							Income based job seeker allowance
-						</Label>
-						<Label id="employmentSupportAllowance">
-							<Input type="checkbox" />
-							Income related employment and support allowance
-						</Label>
-						<Label id="NAsupport">
-							<Input type="checkbox" />
-							National Asylum support
-						</Label>
-						<Label id="statePension">
-							<Input type="checkbox" />
-							State pension credit
-						</Label>
-						<Label id="childTaxCredit">
-							<Input type="checkbox" />
-							Child tax credit
-						</Label>
-						<Label id="childTaxCreditAmount">
-							<p>Child tax credit Amount:</p>
-							<Input type="text" />
-						</Label>
-						<Label id="workingTaxCredit">
-							<Input type="checkbox" />
-							Working tax credit
-						</Label>
-						<Label id="universalCredit">
-							<Input type="checkbox" />
-							Universial credit of more than £7,400
-						</Label>
-						<Label id="universalCreditAmount">
-							<LabelParagraph>Universial Credit Amount:</LabelParagraph>
-							<Input type="text" />
-						</Label>
-					</Fieldset>
-				
-					<div>
-						<Fieldset>
-							<h2>Parents/Gurdians</h2>
-							<Label id="parent-name">
-								<LabelParagraph>Name</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-							<Label id="parent-DoB">
-								<LabelParagraph>Date of Birth</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-							<Label id="NI-NA-no">
-								<LabelParagraph>NI Number or National Asylum number</LabelParagraph>
-								<BlockInput type="number" />
-							</Label>
-							<Label id="phone">
-								<LabelParagraph>Daytime phone number</LabelParagraph>
-								<BlockInput type="number" />
-							</Label>
-							<Label id="address">
-								<LabelParagraph>Address</LabelParagraph>
-								<Textarea name="address"></Textarea>
-							</Label>
-							<Label id="postcode">
-								<LabelParagraph>Postcode</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-						</Fieldset>
-
-						<Fieldset>
-							<h2>Pupil</h2>
-							<Label id="pupil-name">
-								<LabelParagraph>Name</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-							<Label id="pupil-DoB">
-								<LabelParagraph>Date of Birth</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-							<Label id="school">
-								<LabelParagraph>Name of School</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-						</Fieldset>
-
-						<Fieldset>
-							<h2>Declaration</h2>
-							<Label id="declaration">
-								<Input type="checkbox" />
-								By ticking this box, you are agreeing to our terms of use.
-								</Label>
-						</Fieldset>
-
-						<Button type="submit">Submit</Button>					
-					</div>
-				</Wrapper>			
-			</form>
-			
+				)}}
+			</Formik>			
 		</React.Fragment>			
 	);
 }
