@@ -1,5 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2%;
 }
 
 .menu {
@@ -10,7 +11,19 @@ body {
     label {
         display: block;
     }
+
+    .qualify {
+        label {
+            cursor: pointer;
+        }
+    }
+
     h2 {
         margin: 5% 0;
+    }
+
+    button {
+        border: 2px solid blue;
+        // background: ;
     }
 }

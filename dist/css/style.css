@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap");
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2%; }
 
 .menu {
   margin: 5% auto; }
@@ -8,8 +9,14 @@ body {
 #premiumForm label {
   display: block; }
 
+#premiumForm .qualify label {
+  cursor: pointer; }
+
 #premiumForm h2 {
   margin: 5% 0; }
+
+#premiumForm button {
+  border: 2px solid blue; }
 
 .menu {
   margin: 5% auto; }
