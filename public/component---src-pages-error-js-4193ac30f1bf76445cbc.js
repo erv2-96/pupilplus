@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{226:function(a,e,n){"use strict";n.r(e);var r=n(0),t=n.n(r),o=n(225);e.default=function(a){var e=a.location;return t.a.createElement(o.a,{title:"Sarah Deeks Podiatry",pathname:e.pathname},"Sorry error pal")}}}]);
+//# sourceMappingURL=component---src-pages-error-js-4193ac30f1bf76445cbc.js.map

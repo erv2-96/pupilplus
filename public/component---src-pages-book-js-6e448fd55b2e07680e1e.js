@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{190:function(e,n,t){"use strict";t.r(n);var a=t(0),l=t.n(a);n.default=function(){return l.a.createElement(l.a.Fragment,null,l.a.createElement("h1",{style:{color:"purple",fontSize:"72px"}},"Book"),l.a.createElement("p",null,"Ring up ideally"))}}}]);
+//# sourceMappingURL=component---src-pages-book-js-6e448fd55b2e07680e1e.js.map

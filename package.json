@@ -1,26 +1,45 @@
 {
-  "name": "pupilpremium",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "gatsby-starter-hello-world",
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "0.0.7",
-    "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-minify-css": "~0.3.1",
-    "gulp-rename": "~1.2.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-util": "~2.2.14"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.16.0"
+    "antd": "^3.22.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "formik": "^2.0.4",
+    "gatsby": "^2.15.0",
+    "gatsby-image": "^2.2.15",
+    "gatsby-plugin-manifest": "^2.2.13",
+    "gatsby-plugin-react-helmet": "^3.1.6",
+    "gatsby-plugin-sharp": "^2.2.18",
+    "gatsby-plugin-styled-components": "^3.1.3",
+    "gatsby-source-filesystem": "^2.1.18",
+    "gatsby-transformer-sharp": "^2.2.12",
+    "lodash": "^4.17.15",
+    "primereact": "^3.3.2",
+    "react": "^16.9.0",
+    "react-burger-menu": "^2.6.11",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

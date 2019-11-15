@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{191:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a);n.default=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement("h1",{style:{color:"purple",fontSize:"72px"}},"Hours"),r.a.createElement("p",null,"Time is money"))}}}]);
+//# sourceMappingURL=component---src-pages-hours-js-aadb60333c6096be2163.js.map

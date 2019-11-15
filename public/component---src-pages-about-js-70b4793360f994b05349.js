@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{189:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a);n.default=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement("h1",{style:{color:"purple",fontSize:"72px"}},"About"),r.a.createElement("p",null,"I was a grand mother pigeon"))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-70b4793360f994b05349.js.map

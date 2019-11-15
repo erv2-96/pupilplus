@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{192:function(e,n,t){"use strict";t.r(n);var a=t(0),o=t.n(a);n.default=function(){return o.a.createElement(o.a.Fragment,null,o.a.createElement("h1",{style:{color:"purple",fontSize:"72px"}},"Location"),o.a.createElement("p",null,"Map me out GG"))}}}]);
+//# sourceMappingURL=component---src-pages-location-js-093df03113fad75062d8.js.map
