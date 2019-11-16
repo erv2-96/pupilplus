@@ -13,10 +13,12 @@ const Confirmation = ({location}) => {
 	return (		
 		<SiteLayout title="Confirmation" pathname={location.pathname}>
 			<BigWrapper>
-				<h1>Thank you!</h1>
-				<h3>Application reference number: 365-892</h3>
-				<p>Please remember your application reference number.</p>
-				<p>A Norfolk County Council representative will be in touch in the next 2 weeks.</p>
+			<h1>Thank you for submitting!</h1>
+				<h3>Here is your application reference number: 365-892</h3>
+				<p>Keep you application reference number safe.</p>
+				<p>
+					Norfolk County Council will have someone get in touch with you in the next 2 weeks to let you know how the application is getting on.
+				</p>
 			</BigWrapper>				
 		</SiteLayout>
 	);
