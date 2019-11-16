@@ -60,14 +60,15 @@ const List = styled.ul`
 const SubmitButton = styled.button`
 	/* disabled */
 	background: lightgrey;
-	
+	border: 2px solid lightgrey;
   padding: 5px 15px;
   -webkit-transition: 0.3s ease;
 	transition: 0.5s ease;
 	font-size: 20px;
 
 	${props => !props.disabled && `
-		background: green;
+		background: #FFC108;
+		border: 2px solid #FFC108;
 		color: white;
 		font-weight: 700;
 			
@@ -95,6 +96,7 @@ const Button = styled.button`
 		
 		:hover {
 			background: #067B8D;
+			border-color: #067B8D;
 			opacity: 1;
 			color: white; 
 		}
@@ -180,7 +182,7 @@ const RequiredParagraph = styled(Paragraph)`
 `; 
 
 const LargeText = styled.p`
-		font-size: 26px;
+		font-size: 20px;
 `;
 
 // const Option = styled.option`
@@ -507,7 +509,7 @@ const CheckPage = () => {
 													);
 												}}
 											</Field>
-											By ticking this box, you are agreeing to our terms of use.
+											By ticking this box, you are agreeing to our terms of use. You are also agreeing for my pupil premium to pass your information onto your local council. 
 										</Label>
 										
 									</QuestionWrapper>
