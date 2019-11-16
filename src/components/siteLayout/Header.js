@@ -22,6 +22,21 @@ img {
 	width: 40%;
 	height: auto;
 }
+
+@media (max-width: 500px){
+img {
+	width: 60%;
+}
+}
+`
+const Menu = styled.div`
+	a {
+		color: #fff;
+		margin-right: 15px;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 1px;
+	}
 `
 
 const Header = ({pathname}) => {
@@ -34,11 +49,11 @@ const Header = ({pathname}) => {
 					<img src={LogoPng} alt='' />
 					</a>
 				</LogoWrap>
-				<div>
+				<Menu>
 					<a href="/faqs">FAQs</a>
 					<a href="/check">Form</a>
 					<a href="http://localhost/chatbot">Chatbot</a>
-				</div>
+				</Menu>
 
 			</HeaderWrap>
 

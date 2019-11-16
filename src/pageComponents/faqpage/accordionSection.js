@@ -27,7 +27,7 @@ class AccordionSection extends Component {
           border: 'none'
         }}
       >
-        <div onClick={onClick} style={{ cursor: 'pointer', background: '#FFC108', padding: '15px', textTransform: 'uppercase' }}>
+        <div onClick={onClick} style={{ cursor: 'pointer', color: '#067B8D', borderBottom: '2px solid #ffc108', padding: '15px 15px 15px 0' }}>
           <strong>{label}</strong>
           <div style={{ float: 'right' }}>
             {!isOpen && <span>&#9660;</span>}

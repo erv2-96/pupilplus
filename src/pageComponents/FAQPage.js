@@ -7,13 +7,32 @@ const FaqWrap = styled.div`
 	padding: 5%;
 	width: 80%;
 	margin: auto;
-    font-size:20px;
+    font-size:18px;
+    margin-bottom: 10%;
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 10%;
+        font-weight: 400;
+    }
 `
 
 const FAQPage = () => {
 	return (
 			<FaqWrap>
-                <p>If your child is eligible for free school meals, they may also be entitled to a sum of money paid to their school to boost their learning. We explain the ins and outs of the pupil premium for parents.</p>
+
+<script src='https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js'></script>
+<script>
+  window.loadWatsonAssistantChat({
+    integrationID: "39ab571e-b4a0-4699-b2e7-e0390ec4b923",
+    region: "eu-gb"
+  }).then(function(instance){
+    instance.render();
+  });
+</script>
+
+                <h1>FAQs</h1>
+                <h2>If your child is eligible for free school meals, they may also be entitled to a sum of money paid to their school to boost their learning. We explain the ins and outs of the pupil premium for parents.</h2>
 				<Accordion allowMultipleOpen>
                     <div label='What is the pupil premium?' isOpen>
                         <p>Introduced in 2011, the pupil premium is a sum of money given to schools each year by the Government to improve the attainment of disadvantaged children.

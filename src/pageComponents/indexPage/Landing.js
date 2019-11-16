@@ -26,7 +26,8 @@ const Overlay = styled.div`
 		width: 50%;
 
 		h1 {
-			font-weight: 40px;
+			font-size: 36px;
+			letter-spacing: 1.5px
 			line-height: 1.5;
 			margin-bottom: 3rem;
 		}
@@ -34,6 +35,16 @@ const Overlay = styled.div`
 
 	p {
 		margin-bottom:2rem;
+	}
+
+	@media (max-width: 500px){
+		div {
+			width: 100%;
+			margin-top: 0;
+			justify-content: flex-start;
+			h1 {
+			font-size: 30px;
+		}}
 	}
 `;
 
@@ -63,6 +74,13 @@ const ImageBubble = styled.div`
 		border-radius: 100%;
 		object-fit: cover;
 		object-position: left;
+	}
+
+	@media (max-width: 500px){
+		img {
+			width: 50vw;
+			height: 50vw;
+		}
 	}
 `
 
