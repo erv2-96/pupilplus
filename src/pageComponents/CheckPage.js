@@ -7,6 +7,8 @@ import VerticalSpacing from '../components/VerticalSpacing';
 import Paragraph from "antd/lib/typography/Paragraph";
 
 import FormikRadioGroup from './checkPage/FormikRadioGroup';
+import Select from '@material-ui/core/Select';
+
 
 // import { OmitProps } from "antd/lib/transfer/renderListBody";
 
@@ -308,40 +310,45 @@ const CheckPage = () => {
 						</Wrapper>
 
 						{showAllForm && (
-							<>
+							
+							
+							
+								<>
 
-								<VerticalSpacing size={50} />
+									<VerticalSpacing size={50} />
 
-								<Label htmlFor="guardianNumber">
-									<FlexColumn>
-										<Paragraph>
-											Please select whether there are 1 or 2 parents/guardians for this child:
-										</Paragraph>
-										<Field as="select" name="guardianNumber">
-											<Option value="1">1 Parent/Guardian</Option>
-											<Option value="2">2 Parents/Guardians</Option>
-										</Field>
-									</FlexColumn>									
-								</Label>
+									<Label htmlFor="guardianNumber">
+										<FlexColumn>
+											<Paragraph>
+												Please select whether there are 1 or 2 parents/guardians for this child:
+											</Paragraph>
+											<Field name='guardianNumber' component={Select} options={[
+													{ value: 1, label: '1 Parent/Guardian' },
+													{ value: 2, label: '2 Parents/Guardians' },
+												]} />
+											</Field>
+										</FlexColumn>									
+									</Label>
 
-								<VerticalSpacing size={50} />
+									<VerticalSpacing size={50} />
 
-								
+									
 
 
-								<div>IGNORE BELOW</div>
+									<div>IGNORE BELOW</div>
 
-								<Button 
-									type="submit" 
-									disabled={
-										!isEmpty(errors) || isSubmitting
-									}
-								>
-									Check
-								</Button>
+									<Button 
+										type="submit" 
+										disabled={
+											!isEmpty(errors) || isSubmitting
+										}
+									>
+										Check
+									</Button>
 
-							</>
-						)}
+								</>
+							)
+						}
 
 					</Form>
 				)}}
