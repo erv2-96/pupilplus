@@ -9,6 +9,16 @@ const BenefitsWrapper = styled.div`
     div {
         max-width: 25%;
         flex-basis:25%;
+        border-bottom: 2px solid #067B8D;
+        border-left: 2px solid #067B8D;
+    }
+
+    div:nth-of-type(5, 6, 7, 8){
+        border-bottom: none;
+    }
+
+    p {
+        text-transform: uppercase;
     }
 `
 

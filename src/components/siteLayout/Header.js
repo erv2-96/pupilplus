@@ -30,10 +30,14 @@ const Header = ({pathname}) => {
 			<HeaderWrap>
 
 				<LogoWrap>
+					<a href="/">
 					<img src={LogoPng} alt='' />
+					</a>
 				</LogoWrap>
 				<div>
-					menu
+					<a href="/faqs">FAQs</a>
+					<a href="/check">Form</a>
+					<a href="http://localhost/chatbot">Chatbot</a>
 				</div>
 
 			</HeaderWrap>

@@ -10,10 +10,10 @@ const Index = ({location}) => {
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>Title of site</title>
+				<title>My Pupil Premium</title>
 			</Helmet>
 
-			<SiteLayout title="Title of site" pathname={location.pathname}>
+			<SiteLayout title="My Pupil Premium" pathname={location.pathname}>
 				<IndexPage />
 			</SiteLayout>
 		</>
