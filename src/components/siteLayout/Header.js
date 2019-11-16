@@ -36,6 +36,11 @@ const Menu = styled.div`
 		text-transform: uppercase;
 		text-decoration: none;
 		letter-spacing: 1px;
+		transition: 0.3s ease;
+	}
+
+	a:hover {
+		color: #FFC108;
 	}
 `
 
