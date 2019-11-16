@@ -69,7 +69,7 @@ const Benefits = () => {
                     <img src={nutrition} />
                         </div>
                     <div>
-                        <p>New experiances</p>
+                        <p>New experiences</p>
                         </div>
                     <div>
                     <img src={skills} />

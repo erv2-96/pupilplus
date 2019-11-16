@@ -1,5 +1,7 @@
-# Sarah Deeks Podiatry
+# My Pupil Premium
 
-A website powered by GatsbyJS.
-
-Supports 320px screen width & above.
+Requirements:
+- node js
+- gatsby js
+- react js
+- yarn
