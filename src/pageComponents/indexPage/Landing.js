@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import threeChildren from '../../images/three-children.jpg';
+import kids from '../../images/kids.jpg';
 
 
 const LandingWrapper = styled.div`
@@ -13,19 +13,23 @@ const Overlay = styled.div`
 	min-height: 70vh;
 	padding: 0 5%;
 	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-
 	background: #067B8D;
 	z-index: 5;
 	color: white;
 
 	div {
 		display: flex;
+		align-items:flex-start;
 		justify-content: center;
-		align-items: flex-start;
 		flex-direction: column;
-		margin-top: 5%;
+		margin-top: -10%;
+		width: 50%;
+
+		h1 {
+			font-weight: 40px;
+			line-height: 1.5;
+			margin-bottom: 3rem;
+		}
 	}
 
 	p {
@@ -43,8 +47,23 @@ const FormButton = styled.a`
 
 	&:hover {
 		background: #000;
+		color: #fff;
 	}
 `;
+
+const ImageBubble = styled.div`
+	position:absolute;
+	right: 10%;
+	bottom: 5%;
+	z-index: 100;
+
+	img {
+		width: 30vw;
+		height: 30vw;
+		border-radius: 100%;
+		object-fit: cover;
+	}
+`
 
 
 const Landing = () => {
@@ -60,6 +79,10 @@ const Landing = () => {
 						</div>
 					
 					</Overlay>
+
+					<ImageBubble>
+							<img src={kids} alt="" />
+						</ImageBubble>
 				</LandingWrapper>
 	);
 };
