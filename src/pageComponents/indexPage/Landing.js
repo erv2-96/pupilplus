@@ -62,6 +62,7 @@ const ImageBubble = styled.div`
 		height: 30vw;
 		border-radius: 100%;
 		object-fit: cover;
+		object-position: left;
 	}
 `
 
