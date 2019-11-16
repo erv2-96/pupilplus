@@ -64,58 +64,7 @@ hover info over category
 								</Label>
 
 				
-					<div>
-						<Fieldset>
-							<h2>Parents/Gurdians</h2>
-							<Label id="parent-name">
-								<LabelParagraph>Name</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-							<Label id="parent-DoB">
-								<LabelParagraph>Date of Birth</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-							<Label id="NI-NA-no">
-								<LabelParagraph>NI Number or National Asylum number</LabelParagraph>
-								<BlockInput type="number" />
-							</Label>
-							<Label id="phone">
-								<LabelParagraph>Daytime phone number</LabelParagraph>
-								<BlockInput type="number" />
-							</Label>
-							<Label id="address">
-								<LabelParagraph>Address</LabelParagraph>
-								<Textarea name="address"></Textarea>
-							</Label>
-							<Label id="postcode">
-								<LabelParagraph>Postcode</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-						</Fieldset>
-
-						<Fieldset>
-							<h2>Pupil</h2>
-							<Label id="pupil-name">
-								<LabelParagraph>Name</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-							<Label id="pupil-DoB">
-								<LabelParagraph>Date of Birth</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-							<Label id="school">
-								<LabelParagraph>Name of School</LabelParagraph>
-								<BlockInput type="text" />
-							</Label>
-						</Fieldset>
-
-						<Fieldset>
-							<h2>Declaration</h2>
-							<Label id="declaration">
-								<Input type="checkbox" />
-								By ticking this box, you are agreeing to our terms of use.
-								</Label>
-						</Fieldset>
+					
 
 						<Button type="submit">Submit</Button>					
 					</div>
