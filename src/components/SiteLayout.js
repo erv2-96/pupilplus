@@ -6,19 +6,22 @@ import Header from "./siteLayout/Header";
 import Footer from "./siteLayout/Footer";
 
 const Main = styled.main`
-	padding: 2rem;
+	margin: 0;
 `;
+
+const navy = '#05182A';
 
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
+	color: ${navy};
+	max-width: 100vw;
 `;
 
 const SiteLayout = ({title, children, pathname}) => 
 	<Wrapper>
 
 		<Header pathname={pathname} />
-
 
 		<Main>
 			{children}
