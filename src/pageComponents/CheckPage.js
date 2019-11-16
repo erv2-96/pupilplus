@@ -19,39 +19,29 @@ const Label = styled.label`
 
 const LabelParagraph = styled.p`
 	margin-bottom: 1rem; 
+	font-size: 18px; 
+	font-weight: bold;
 `;
 
 const MyParagraph = styled(Paragraph)`
 	font-size: 18px; 
 `;
 
-// const Input = styled.input`
-// 	:hover, :focus {
-// 		outline: 1px yellow solid;
-// 	}
-// `;
-
 const BlockInputField = styled(Field)`
 	display: block;
 	width: 100%;
 	border: 2px solid #606060;
 	padding: 5px;
+	font-size: 16px;
 
-	:hover, :focus {
-		outline: 1px yellow solid;
+	:hover {
+		outline: 2px #FFC108 solid;
+	} 
+
+	:focus {
+		outline: 2px #067B8D solid;
 	}
 `;
-
-// const Textarea = styled.textarea`
-// 	display: block;
-// 	width: 100%;
-// 	border: 2px solid #606060;
-// 	padding: 5px;
-
-// 	:hover, :focus {
-// 		outline: 1px yellow solid;
-// 	}
-// `;
 
 const Heading = styled.h2`
 	margin: 2rem 0 0 0;
@@ -67,26 +57,75 @@ const List = styled.ul`
 	} 
 `;
 
-const Button = styled.button`
-  background: none;
+const SubmitButton = styled.button`
+	/* disabled */
+	background: lightgrey;
+	
   padding: 5px 15px;
   -webkit-transition: 0.3s ease;
-	transition: 0.3s ease;
+	transition: 0.5s ease;
+	font-size: 20px;
+
+	${props => !props.disabled && `
+		background: green;
+		color: white;
+		font-weight: 700;
+			
+		:hover {
+			border: solid 2px #FFC108;
+		}
+	`}
+`;
+
+const Button = styled.button`
+	/* disabled */
+	background: lightgrey;
+	
+  padding: 5px 15px;
+  -webkit-transition: 0.3s ease;
+	transition: 0.5s ease;
 	font-size: 20px;
 	
 	${props => !props.disabled && `
 		border: 2px solid #2196F3;
+		background: #FFC108;
+		opacity: 0.75;
+		
 		
 		:hover {
-			background: #2196F3;
+			background: #067B8D;
+			opacity: 1;
 			color: white; 
 		}
 	`}	
 
 	${props => props.showAllForm && `
 		background: green;
+		opacity: 1;
 		color: white;
 		font-weight: 700;
+
+		
+			display: inline-block;
+			position: relative;
+			background: green;
+			padding: 15px 0;
+			
+			text-align: center;
+		
+		:after {
+			content: '';
+			display: block;  
+			position: absolute;
+			left: calc(50% - 100px);
+			top: 100%;
+			width: 0;
+			height: 0;
+			border-top: 20px solid green;
+			border-right: 100px solid transparent;
+			border-bottom: 0 solid transparent;
+			border-left: 100px solid transparent;
+		}
 	`}	
 
 
@@ -225,7 +264,7 @@ const CheckPage = () => {
 					return errors;
 				}}
 				onSubmit={(values, { setSubmitting }) => {
-					setTimeout(() => {
+					setTimeout(() => {						
 						alert(JSON.stringify(values, null, 2));
 						setSubmitting(false);
 						window.location.href = "/confirmation";
@@ -273,7 +312,7 @@ const CheckPage = () => {
 							return 'Please complete all required fields before clicking the \'check\' button.';
 						}
 						
-						return 'Click to check your status!';
+						return 'Click to check your status! If you may be eligible a form will appear below to complete!';
 					} 
 
 					return (
@@ -337,7 +376,7 @@ const CheckPage = () => {
 
 							<StatusBox>
 	
-								<div>{getInitialFormStatusString()}</div>
+								<MyParagraph>{getInitialFormStatusString()}</MyParagraph>
 
 								<VerticalSpacing size={20} />
 								
@@ -348,7 +387,7 @@ const CheckPage = () => {
 									}
 									showAllForm={showAllForm}
 								>
-									{showAllForm ? 'You may be eligible! Continue below...' : 'Check'}
+									{showAllForm ? 'You may be eligible! Apply easily by continuing below...' : 'Check'}
 								</Button>
 							</StatusBox>
 						</Wrapper>
@@ -358,7 +397,7 @@ const CheckPage = () => {
 							
 								<>
 
-									<VerticalSpacing size={50} />
+									<VerticalSpacing size={10} />
 
 									<QuestionWrapper>
 										<h2>{isSecondParent ? 'First Parent/Guardian details' : 'Single Parent/Guardian details'}</h2>
@@ -477,14 +516,14 @@ const CheckPage = () => {
 
 									<VerticalSpacing size={50} />
 									
-									<Button 
+									<SubmitButton 
 										type="submit" 
 										disabled={
-											!isEmpty(errors) || isSubmitting || !values.declaration
+											!isEmpty(errors) || !values.declaration
 										}
 									>
 										Submit
-									</Button>
+									</SubmitButton>
 
 								</>
 							)
