@@ -13,7 +13,7 @@ const Confirmation = ({location}) => {
 	return (		
 		<SiteLayout title="Confirmation" pathname={location.pathname}>
 			<BigWrapper>
-			<h1>Thank you for submitting!</h1>
+				<h1>Thank you for submitting!</h1>
 				<h3>Here is your application reference number: 365-892</h3>
 				<p>Keep you application reference number safe.</p>
 				<p>
