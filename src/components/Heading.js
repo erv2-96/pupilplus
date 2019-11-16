@@ -19,4 +19,3 @@ Heading.propTypes = {
 };
 
 export default Heading;
-	
