@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('C:/xampp/htdocs/pupilpremium/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/var/www/html/pupilplus/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('C:/xampp/htdocs/pupilpremium/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/var/www/html/pupilplus/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Site","short_name":"Site","start_url":"/"},
     },{
-      plugin: require('C:/xampp/htdocs/pupilpremium/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/var/www/html/pupilplus/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

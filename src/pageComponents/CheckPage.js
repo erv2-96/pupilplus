@@ -21,6 +21,10 @@ const LabelParagraph = styled.p`
 	margin-bottom: 1rem; 
 `;
 
+const MyParagraph = styled(Paragraph)`
+	font-size: 18px; 
+`;
+
 // const Input = styled.input`
 // 	:hover, :focus {
 // 		outline: 1px yellow solid;
@@ -54,7 +58,7 @@ const Heading = styled.h2`
 `;
 
 const List = styled.ul`
-	margin: 0;
+	margin: 10px 0 20px 0;
 	font-size: 18px;
 
 	/* desktop */
@@ -146,6 +150,10 @@ const LargeText = styled.p`
 // 	font-size: 16px;
 // `;
 
+const BigWrapper = styled.div`
+		margin: 50px 5%;
+`;
+
 const CheckPage = () => {
 
 	const [showAllForm, setShowAllForm] = React.useState(false);
@@ -153,7 +161,7 @@ const CheckPage = () => {
 
 
 	return (
-		<React.Fragment>
+		<BigWrapper>
 
 			<h1>Eligibility checker</h1>
 
@@ -299,7 +307,7 @@ const CheckPage = () => {
 							
 								<Heading>Universal Credit*</Heading>
 								<RequiredParagraph>(*This field is required.)</RequiredParagraph>
-								<Paragraph>Do you receive Universal Credit where the yearly combined awarded amount for your household is less than £7,400?</Paragraph>
+								<MyParagraph>Do you receive Universal Credit where the yearly combined awarded amount for your household is less than £7,400?</MyParagraph>
 
 								<Field
 									name="universalCredit"
@@ -314,9 +322,9 @@ const CheckPage = () => {
 							
 								<Heading>Child Tax Credit*</Heading>
 								<RequiredParagraph>(*This field is required.)</RequiredParagraph>
-								<Paragraph>
+								<MyParagraph>
 									Do you receive Child Tax Credit (with no Working Tax Credit) with an annual income of less than £16,190?	
-								</Paragraph>
+								</MyParagraph>
 
 								<Field
 									name="childTaxCredit"
@@ -330,6 +338,8 @@ const CheckPage = () => {
 							<StatusBox>
 	
 								<div>{getInitialFormStatusString()}</div>
+
+								<VerticalSpacing size={20} />
 								
 								<Button 
 									onClick={() => setShowAllForm(true)} 
@@ -483,7 +493,7 @@ const CheckPage = () => {
 					</Form>
 				)}}
 			</Formik>			
-		</React.Fragment>			
+		</BigWrapper>			
 	);
 }
 
